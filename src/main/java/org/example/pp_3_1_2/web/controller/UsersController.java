@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.List;
 
 @Controller
+@RequestMapping("/")
 public class UsersController {
 
 
@@ -23,7 +24,6 @@ public class UsersController {
 		this.userService = userService;
 	}
 
-	@RequestMapping("/")
 	@GetMapping("/")
 	public String printWelcome(ModelMap model) {
 		List<User> users = userService.getAllUsers();
